@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* threadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* threadTests.m */; };
+		0785385D2FB4434AB53D86B5 /* MinSans-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12D002052ADB4E2388DA4B01 /* MinSans-Black.otf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-thread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-thread.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-thread-threadTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-thread-threadTests.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		39E07CDD299548C9B9052687 /* MinSansVF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15FD3365ACE64479A940E00F /* MinSansVF.ttf */; };
-		0785385D2FB4434AB53D86B5 /* MinSans-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12D002052ADB4E2388DA4B01 /* MinSans-Black.otf */; };
-		7F7AD8E446AC41C787DCDFB0 /* MinSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B7467F0B904A4D7AB67E5950 /* MinSans-Bold.otf */; };
-		373D990E7CA74FA0BD906694 /* MinSans-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5F0EFF5FFCA483BA4CAAD34 /* MinSans-ExtraBold.otf */; };
 		16BC4A10D397452496FA35F5 /* MinSans-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 50395478EFE441E6858EED8A /* MinSans-ExtraLight.otf */; };
-		778F3EC501BD44029D10EBB0 /* MinSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5B200BDC80447F8AA26FCC7 /* MinSans-Light.otf */; };
-		A82D5BA04F0F4BC288190EBF /* MinSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 48D84A32E7CD4151BC557C65 /* MinSans-Medium.otf */; };
+		373D990E7CA74FA0BD906694 /* MinSans-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5F0EFF5FFCA483BA4CAAD34 /* MinSans-ExtraBold.otf */; };
+		39E07CDD299548C9B9052687 /* MinSansVF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15FD3365ACE64479A940E00F /* MinSansVF.ttf */; };
 		5E7DEA041FCD41E3A69CF0F8 /* MinSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7936231382244CF0A993E48E /* MinSans-Regular.otf */; };
-		D6893B9327BA4019ACF044F7 /* MinSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 72D26E72441E4AA6B28D24D2 /* MinSans-SemiBold.otf */; };
+		7699B88040F8A987B510C191 /* libPods-thread-threadTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-thread-threadTests.a */; };
+		778F3EC501BD44029D10EBB0 /* MinSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5B200BDC80447F8AA26FCC7 /* MinSans-Light.otf */; };
+		7F7AD8E446AC41C787DCDFB0 /* MinSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B7467F0B904A4D7AB67E5950 /* MinSans-Bold.otf */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A82D5BA04F0F4BC288190EBF /* MinSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 48D84A32E7CD4151BC557C65 /* MinSans-Medium.otf */; };
 		B1FF1E7B94634D13BACC12B6 /* MinSans-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD83455614264D049EB3738B /* MinSans-Thin.otf */; };
+		D6893B9327BA4019ACF044F7 /* MinSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 72D26E72441E4AA6B28D24D2 /* MinSans-SemiBold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,30 +40,30 @@
 		00E356EE1AD99517003FC87E /* threadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = threadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* threadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = threadTests.m; sourceTree = "<group>"; };
+		12D002052ADB4E2388DA4B01 /* MinSans-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MinSans-Black.otf"; path = "../assets/fonts/static/MinSans-Black.otf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* thread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thread.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = thread/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = thread/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = thread/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = thread/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = thread/main.m; sourceTree = "<group>"; };
+		15FD3365ACE64479A940E00F /* MinSansVF.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MinSansVF.ttf; path = ../assets/fonts/variable/MinSansVF.ttf; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-thread-threadTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-thread-threadTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-thread.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thread.debug.xcconfig"; path = "Target Support Files/Pods-thread/Pods-thread.debug.xcconfig"; sourceTree = "<group>"; };
+		48D84A32E7CD4151BC557C65 /* MinSans-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MinSans-Medium.otf"; path = "../assets/fonts/static/MinSans-Medium.otf"; sourceTree = "<group>"; };
+		50395478EFE441E6858EED8A /* MinSans-ExtraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MinSans-ExtraLight.otf"; path = "../assets/fonts/static/MinSans-ExtraLight.otf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-thread.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thread.release.xcconfig"; path = "Target Support Files/Pods-thread/Pods-thread.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-thread-threadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thread-threadTests.debug.xcconfig"; path = "Target Support Files/Pods-thread-threadTests/Pods-thread-threadTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-thread.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-thread.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72D26E72441E4AA6B28D24D2 /* MinSans-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MinSans-SemiBold.otf"; path = "../assets/fonts/static/MinSans-SemiBold.otf"; sourceTree = "<group>"; };
+		7936231382244CF0A993E48E /* MinSans-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MinSans-Regular.otf"; path = "../assets/fonts/static/MinSans-Regular.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = thread/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-thread-threadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thread-threadTests.release.xcconfig"; path = "Target Support Files/Pods-thread-threadTests/Pods-thread-threadTests.release.xcconfig"; sourceTree = "<group>"; };
+		A5B200BDC80447F8AA26FCC7 /* MinSans-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MinSans-Light.otf"; path = "../assets/fonts/static/MinSans-Light.otf"; sourceTree = "<group>"; };
+		A5F0EFF5FFCA483BA4CAAD34 /* MinSans-ExtraBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MinSans-ExtraBold.otf"; path = "../assets/fonts/static/MinSans-ExtraBold.otf"; sourceTree = "<group>"; };
+		B7467F0B904A4D7AB67E5950 /* MinSans-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MinSans-Bold.otf"; path = "../assets/fonts/static/MinSans-Bold.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		15FD3365ACE64479A940E00F /* MinSansVF.ttf */ = {isa = PBXFileReference; name = "MinSansVF.ttf"; path = "../assets/fonts/variable/MinSansVF.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		12D002052ADB4E2388DA4B01 /* MinSans-Black.otf */ = {isa = PBXFileReference; name = "MinSans-Black.otf"; path = "../assets/fonts/static/MinSans-Black.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B7467F0B904A4D7AB67E5950 /* MinSans-Bold.otf */ = {isa = PBXFileReference; name = "MinSans-Bold.otf"; path = "../assets/fonts/static/MinSans-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A5F0EFF5FFCA483BA4CAAD34 /* MinSans-ExtraBold.otf */ = {isa = PBXFileReference; name = "MinSans-ExtraBold.otf"; path = "../assets/fonts/static/MinSans-ExtraBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		50395478EFE441E6858EED8A /* MinSans-ExtraLight.otf */ = {isa = PBXFileReference; name = "MinSans-ExtraLight.otf"; path = "../assets/fonts/static/MinSans-ExtraLight.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A5B200BDC80447F8AA26FCC7 /* MinSans-Light.otf */ = {isa = PBXFileReference; name = "MinSans-Light.otf"; path = "../assets/fonts/static/MinSans-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		48D84A32E7CD4151BC557C65 /* MinSans-Medium.otf */ = {isa = PBXFileReference; name = "MinSans-Medium.otf"; path = "../assets/fonts/static/MinSans-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7936231382244CF0A993E48E /* MinSans-Regular.otf */ = {isa = PBXFileReference; name = "MinSans-Regular.otf"; path = "../assets/fonts/static/MinSans-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		72D26E72441E4AA6B28D24D2 /* MinSans-SemiBold.otf */ = {isa = PBXFileReference; name = "MinSans-SemiBold.otf"; path = "../assets/fonts/static/MinSans-SemiBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FD83455614264D049EB3738B /* MinSans-Thin.otf */ = {isa = PBXFileReference; name = "MinSans-Thin.otf"; path = "../assets/fonts/static/MinSans-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FD83455614264D049EB3738B /* MinSans-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "MinSans-Thin.otf"; path = "../assets/fonts/static/MinSans-Thin.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +170,7 @@
 			sourceTree = "<group>";
 		};
 		DC8D7C5E05334D79953FA648 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				15FD3365ACE64479A940E00F /* MinSansVF.ttf */,
 				12D002052ADB4E2388DA4B01 /* MinSans-Black.otf */,
@@ -184,8 +184,8 @@
 				FD83455614264D049EB3738B /* MinSans-Thin.otf */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 

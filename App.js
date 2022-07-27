@@ -1,15 +1,32 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
+import Icon from './components/common/Icon';
 
 function App() {
-  return <Text style={styles.text}>안녕하세요</Text>;
+  return (
+    <View>
+      <Text style={styles.text}>안녕하세요</Text>
+      <Text style={styles.text}>안녕하세요</Text>
+      <Text style={styles.text}>안녕하세요</Text>
+      <Text style={styles.text}>안녕하세요</Text>
+      <Text style={styles.text}>안녕하세요</Text>
+      <Icon
+      // name={'add'}
+      // folder={'round'}
+      // // width={'20'}
+      // // height={'20'}
+      // fill="#0f0"
+      />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-  block: {},
+  block: {
+    flex: 1,
+  },
   text: {
     fontFamily: 'MinSans-Bold',
-    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
