@@ -9,6 +9,11 @@
     "test": "jest",
     "lint": "eslint ."
   },
+  "rnpm" : {
+    "asssets": [
+      "./assets/fonts/static/"
+    ]
+  },
   "dependencies": {
     "react": "17.0.2",
     "react-native": "0.68.2"
