@@ -1,13 +1,18 @@
 import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import CustomButton from '../common/CustomButton';
+import {useNavigation} from '@react-navigation/native';
 
 function Empty() {
+  const navigation = useNavigation();
+  const onCreate = () => {
+    navigation.push('Write');
+  };
   return (
     <View style={styles.block}>
       <Text style={styles.header}>이 곳에 생각을 정리해보세요.</Text>
       <Text style={styles.body}>스레드에서 생각의 흐름을 따라가보세요.</Text>
-      <CustomButton title={'글 작성하기'} />
+      <CustomButton title={'글 작성하기'} onPress={onCreate} />
     </View>
   );
 }
