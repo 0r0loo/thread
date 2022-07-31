@@ -14,7 +14,8 @@ function Icon(props) {
     // squareFill,
   };
   console.log('-> props', props);
-  return <SvgIcon width={50} height={50} svgs={round} fill="#0f0" />;
+  // return <SvgIcon width={50} height={50} svgs={round} fill="#0f0" />;
+  return null;
 }
 
 export default Icon;

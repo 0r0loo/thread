@@ -1,23 +1,15 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import Icon from './components/common/Icon';
+import MainScreen from './screens/MainScreen';
+import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
 
 function App() {
   return (
-    <View>
-      <Text style={styles.text}>안녕하세요</Text>
-      <Text style={styles.text}>안녕하세요</Text>
-      <Text style={styles.text}>안녕하세요</Text>
-      <Text style={styles.text}>안녕하세요</Text>
-      <Text style={styles.text}>안녕하세요</Text>
-      <Icon
-      // name={'add'}
-      // folder={'round'}
-      // // width={'20'}
-      // // height={'20'}
-      // fill="#0f0"
-      />
-    </View>
+    <SafeAreaProvider>
+      <SafeAreaView edges={['bottom']} style={{flex: 1}}>
+        <MainScreen />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
