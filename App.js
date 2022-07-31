@@ -1,15 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import MainScreen from './screens/MainScreen';
-import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
+import {NavigationContainer} from '@react-navigation/native';
+import RootStack from './screens/RootStack';
 
 function App() {
   return (
-    <SafeAreaProvider>
-      <SafeAreaView edges={['bottom']} style={{flex: 1}}>
-        <MainScreen />
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <RootStack />
+    </NavigationContainer>
   );
 }
 
