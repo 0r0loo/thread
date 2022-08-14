@@ -1,6 +1,8 @@
 import React, {useEffect, useRef} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {Animated, Platform, Pressable, StyleSheet, Text} from 'react-native';
+import {images} from '../../images';
+import IconButton from './IconButton';
 
 function FloatingWriteButton({hidden}) {
   const navigation = useNavigation();
@@ -46,7 +48,11 @@ function FloatingWriteButton({hidden}) {
           Platform.OS === 'ios' && {opacity: pressed ? 0.6 : 1},
         ]}
         onPress={onPress}>
-        <Text>+</Text>
+        <IconButton
+          type={images.add}
+          tintColor={'white'}
+          onPressOut={onPress}
+        />
       </Pressable>
     </Animated.View>
   );

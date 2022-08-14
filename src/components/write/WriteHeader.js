@@ -11,12 +11,15 @@ function WriteHeader() {
 
   return (
     <View style={styles.block}>
-      <View>
-        <Pressable onPress={onClose}>
-          {/* TODO: X Icon으로 교체해야함 */}
-          <Text>X</Text>
-        </Pressable>
-      </View>
+      <Pressable
+        onPress={onClose}
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        {/* TODO: X Icon으로 교체해야함 */}
+        <Text>X</Text>
+      </Pressable>
       <View style={styles.center}>
         <Text style={styles.title}>글 쓰기</Text>
       </View>

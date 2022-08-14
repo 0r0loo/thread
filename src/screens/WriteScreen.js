@@ -4,19 +4,20 @@ import WriteHeader from '../components/write/WriteHeader';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import WriteBody from '../components/write/WriteBody';
 import WriteFooter from '../components/write/WriteFooter';
+import WriteCategory from '../components/write/WriteCategory';
 
 function WriteScreen() {
   console.log('Write');
   return (
     <SafeAreaView style={styles.blocK}>
-      <KeyboardAvoidingView style={styles.avodingView}>
+      <KeyboardAvoidingView style={styles.avodingView} behavior={'padding'}>
         <WriteHeader />
         {/*
         TODO: 카테고리 추가하는 그런 느낌의 그걸 만들어야함.
-
         */}
-        <WriteBody />
-        <WriteFooter />
+        <WriteCategory />
+        {/*<WriteBody />*/}
+        {/*<WriteFooter />*/}
       </KeyboardAvoidingView>
     </SafeAreaView>
   );

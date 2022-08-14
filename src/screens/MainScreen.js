@@ -4,13 +4,15 @@ import MainHeader from '../components/main/MainHeader';
 import Empty from '../components/main/Empty';
 import FloatingWriteButton from '../components/common/FloatingWriteButton';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import Thread from '../components/main/Thread';
 
 function MainScreen() {
   return (
     <SafeAreaView edges={['bottom']} style={{flex: 1}}>
       <Container>
         <MainHeader />
-        <Empty />
+        <Thread />
+        {/*<Empty />*/}
         <FloatingWriteButton />
       </Container>
     </SafeAreaView>

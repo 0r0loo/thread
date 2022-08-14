@@ -5,6 +5,8 @@ import styled from 'styled-components/native';
 import {format} from 'date-fns';
 import {ko} from 'date-fns/locale';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {images} from '../../images';
+import IconButton from '../common/IconButton';
 
 /*
  * 글이 없는 경우 : 빈 컴포넌트를 보여줘야한다.
@@ -32,8 +34,14 @@ function MainHeader() {
           )}
         </View>
         <Buttons>
-          <TransparentCircleButton hasMarginRight={20} />
-          <TransparentCircleButton />
+          <IconButton
+            type={images.list}
+            marginRight={20}
+            tintColor={'#31302B'}
+          />
+          <IconButton type={images.setting} tintColor={'#31302B'} />
+          {/*<TransparentCircleButton hasMarginRight={20} />*/}
+          {/*<TransparentCircleButton />*/}
         </Buttons>
       </Container>
     </>
