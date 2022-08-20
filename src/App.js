@@ -4,12 +4,15 @@ import {NavigationContainer} from '@react-navigation/native';
 import RootStack from './screens/RootStack';
 import {theme} from './theme';
 import {ThemeProvider} from 'styled-components';
+import {ThreadContextProvider} from './contexts/ThreadContext';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
-        <RootStack />
+        <ThreadContextProvider>
+          <RootStack />
+        </ThreadContextProvider>
       </NavigationContainer>
     </ThemeProvider>
   );

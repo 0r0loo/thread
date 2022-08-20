@@ -1,6 +1,9 @@
 import React from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import IconButton from '../common/IconButton';
+import {images} from '../../images';
+import styled from 'styled-components/native';
 
 function WriteHeader() {
   const navigation = useNavigation();
@@ -11,26 +14,40 @@ function WriteHeader() {
 
   return (
     <View style={styles.block}>
-      <Pressable
-        onPress={onClose}
-        style={{
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
-        {/* TODO: X Icon으로 교체해야함 */}
-        <Text>X</Text>
-      </Pressable>
+      {/*<Pressable*/}
+      {/*  onPress={onClose}*/}
+      {/*  style={{*/}
+      {/*    justifyContent: 'center',*/}
+      {/*    alignItems: 'center',*/}
+      {/*  }}>*/}
+      {/*  /!* TODO: X Icon으로 교체해야함 *!/*/}
+      {/*  <Text>X</Text>*/}
+      {/*</Pressable>*/}
+      <IconButton
+        type={images.close}
+        tintColor={'#31302B'}
+        onPressOut={onClose}
+      />
       <View style={styles.center}>
-        <Text style={styles.title}>글 쓰기</Text>
+        <HeaderText>글 쓰기</HeaderText>
       </View>
     </View>
   );
 }
 
+const HeaderText = styled.Text`
+  font-family: 'Min Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: ${({theme}) => theme.ui01};
+`;
+
 const styles = StyleSheet.create({
   block: {
     height: 56,
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
     padding: 16,
     flexDirection: 'row',
   },

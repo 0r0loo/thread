@@ -20,6 +20,11 @@ function MainHeader() {
   // LIST, CALENDAR
   const [mainType, setMainType] = useState('LIST');
 
+  console.log(
+    "-> format(new Date(), 'PPP', {locale: ko})",
+    format(new Date(), 'PPP', {locale: ko}),
+  );
+
   return (
     <>
       <View style={{height: top, backgroundColor: '#f7f6f2'}} />

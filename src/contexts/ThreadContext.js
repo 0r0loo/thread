@@ -3,8 +3,16 @@ import threadsStorage from '../storages/threadStorage';
 
 const ThreadContext = createContext();
 
+const defaultThread = {
+  id: 1,
+  categoryId: '🔥',
+  title: '제목',
+  content: '어쩌고저쩌고',
+  date: '2022-08-20T11:52:42.054Z',
+};
+
 export function ThreadContextProvider({children}) {
-  const [threads, setThreads] = useState([]);
+  const [threads, setThreads] = useState([defaultThread]);
   const initialThreadsRef = useRef(null);
 
   const onCreate = ({}) => {};
@@ -34,3 +42,5 @@ export function ThreadContextProvider({children}) {
     </ThreadContext.Provider>
   );
 }
+
+export default ThreadContext;
