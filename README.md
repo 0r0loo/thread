@@ -1,20 +1,4 @@
-### 이슈
-- svg icon 못 넣는중..
-- 글로벌 스타일
-- 공용 컴포넌트로 빼기
-
-
-
-프로젝트구조
-
-screens
-
-compoenents
-
-contexts
-
-styles
-
+리드미를 수정해보자
 
 
 라이브러리 정리
