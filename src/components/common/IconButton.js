@@ -2,10 +2,27 @@ import React from 'react';
 import {TouchableOpacity} from 'react-native';
 import styled, {css} from 'styled-components/native';
 
+const Cotainer = styled(TouchableOpacity)`
+  padding: 6px;
+  border-radius: 8px;
+
+  ${({paddingColor}) =>
+    paddingColor &&
+    css`
+      background-color: ${paddingColor};
+    `};
+
+  ${({marginRight}) =>
+    marginRight &&
+    css`
+      margin-right: ${marginRight}px;
+    `};
+`;
+
 const Icon = styled.Image`
   width: ${({width}) => width}px;
   height: ${({height}) => height}px;
-  margin-right: ${({marginRight}) => marginRight}px;
+
   ${({tintColor}) =>
     tintColor &&
     css`
@@ -28,18 +45,21 @@ function IconButton({
   marginRight = 0,
   tintColor,
   size,
+  paddingColor,
 }) {
   return (
-    <TouchableOpacity onPressOut={onPressOut}>
+    <Cotainer
+      onPressOut={onPressOut}
+      paddingColor={paddingColor}
+      marginRight={marginRight}>
       <Icon
         source={type}
         width={width}
         height={height}
-        marginRight={marginRight}
         tintColor={tintColor}
         size={size}
       />
-    </TouchableOpacity>
+    </Cotainer>
   );
 }
 
