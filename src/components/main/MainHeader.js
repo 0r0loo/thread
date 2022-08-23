@@ -7,6 +7,7 @@ import {ko} from 'date-fns/locale';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {images} from '../../images';
 import IconButton from '../common/IconButton';
+import DateTimePicker from 'react-native-modal-datetime-picker';
 
 /*
  * 글이 없는 경우 : 빈 컴포넌트를 보여줘야한다.
@@ -15,15 +16,22 @@ import IconButton from '../common/IconButton';
  *
  * */
 
-function MainHeader() {
+function MainHeader({date, mainType, onPressViewType}) {
   const {top} = useSafeAreaInsets();
-  // LIST, CALENDAR
-  const [mainType, setMainType] = useState('LIST');
+  const [visible, setVisible] = useState(false);
 
-  console.log(
-    "-> format(new Date(), 'PPP', {locale: ko})",
-    format(new Date(), 'PPP', {locale: ko}),
-  );
+  const onPressSelectDate = () => {
+    setVisible(true);
+  };
+
+  const onConfirm = selectedDate => {
+    setVisible(false);
+    console.log('-> selectedDate', selectedDate);
+  };
+
+  const onCancel = () => {
+    setVisible(false);
+  };
 
   return (
     <>
@@ -33,21 +41,35 @@ function MainHeader() {
           {mainType === 'LIST' ? (
             <HeaderTitle>스레드</HeaderTitle>
           ) : (
-            <Pressable>
+            <DateContainer>
               <DateText>{format(new Date(), 'PPP', {locale: ko})}</DateText>
-            </Pressable>
+              {/* TODO: */}
+              <IconButton
+                type={images.arrowDropDown}
+                size={12}
+                onPressOut={onPressSelectDate}
+                tintColor={'#333333'}
+              />
+            </DateContainer>
           )}
         </View>
         <Buttons>
           <IconButton
-            type={images.list}
+            type={mainType === 'LIST' ? images.list : images.calendarToday}
             marginRight={20}
             tintColor={'#31302B'}
+            onPressOut={onPressViewType}
           />
           <IconButton type={images.setting} tintColor={'#31302B'} />
           {/*<TransparentCircleButton hasMarginRight={20} />*/}
           {/*<TransparentCircleButton />*/}
         </Buttons>
+        <DateTimePicker
+          isVisible={visible}
+          mode={'date'}
+          onConfirm={() => onConfirm()}
+          onCancel={() => onCancel()}
+        />
       </Container>
     </>
   );
@@ -66,6 +88,11 @@ const HeaderTitle = styled.Text`
   color: #31302b;
   line-height: 28px;
   font-size: 21px;
+`;
+
+const DateContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
 `;
 
 const DateText = styled.Text`
