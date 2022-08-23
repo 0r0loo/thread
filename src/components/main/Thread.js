@@ -66,14 +66,14 @@ const Content = styled.Text`
 
 function Thread({thread}) {
   const width = Dimensions.get('window').width;
-  const {categoryId, content, date, title} = thread;
+  const {categoryId, content, date, title, isTitle} = thread;
 
   return (
     <Container width={width}>
       <Left>
         <CategoryWrapper>
           <Category>{categoryId}</Category>
-          <BorderWrapper></BorderWrapper>
+          <BorderWrapper />
         </CategoryWrapper>
       </Left>
       <Right>
@@ -81,7 +81,7 @@ function Thread({thread}) {
           <DateText>{format(new Date(), 'PPP', {locale: ko})}</DateText>
           <IconButton tintColor={'#A5A39B'} type={images.moreHoriz} size={16} />
         </RightHeader>
-        <Title>{title}</Title>
+        {isTitle && <Title>{title}</Title>}
         <RightBody>
           <Content>{content}</Content>
         </RightBody>

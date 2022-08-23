@@ -1,34 +1,54 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import CustomButton from '../common/CustomButton';
+import IconButton from '../common/IconButton';
+import {images} from '../../images';
+import styled from 'styled-components/native';
+import useThemeContext from '../../hooks/useThemeContext';
 
-function WriteFooter() {
+function WriteFooter({isTitle, onPressIsTitle, isDone, onSave}) {
+  const themeContext = useThemeContext();
+
   return (
     <View style={styles.block}>
-      <View style={styles.left}>
-        <Text
-          style={{
-            marginRight: 8,
-          }}>
-          제목
-        </Text>
-        <Text
-          style={{
-            marginRight: 8,
-          }}>
-          임지
-        </Text>
-        <Text>일정</Text>
-      </View>
+      <Left>
+        <IconButton
+          type={images.title}
+          size={24}
+          tintColor={isTitle ? themeContext.point : themeContext.ui02}
+          paddingColor={isTitle && themeContext.point02}
+          marginRight={16}
+          onPressOut={onPressIsTitle}
+        />
+        <IconButton
+          type={images.image}
+          size={24}
+          tintColor={themeContext.ui02}
+          marginRight={16}
+        />
+        <IconButton
+          type={images.event}
+          size={24}
+          tintColor={themeContext.ui02}
+        />
+      </Left>
       <View>
         <CustomButton
           title={'작성완료'}
-          onPress={() => console.log('작성완료')}
+          onPress={() => onSave()}
+          type={isDone ? 'point' : 'gray'}
         />
       </View>
     </View>
   );
 }
+
+const Container = styled.View``;
+
+const Left = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
 
 const styles = StyleSheet.create({
   block: {
@@ -37,13 +57,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 20,
     paddingVertical: 12,
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
   },
-  left: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  right: {},
 });
 
 export default WriteFooter;

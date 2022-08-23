@@ -1,25 +1,38 @@
 import React, {useRef} from 'react';
 import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {format} from 'date-fns';
+import {ko} from 'date-fns/locale';
 
-function WriteBody() {
+function WriteBody({isTitle, title, onChangeTitle, content, onChangeContent}) {
   const bodyRef = useRef();
+
   // TODO : 스크롤 되어야함.
   return (
     <View style={styles.block}>
-      <Text style={styles.category}>💖</Text>
-      <Text style={styles.date}>2022년 7월 31일, 오늘</Text>
-      <TextInput
-        placeholder={'제목을 입력해주세요!'}
-        style={styles.titleInput}
-        returnKeyType={'next'}
-        onSubmitEditing={() => bodyRef.current.focus()}
-      />
+      {/* TODO: 카테고리 하드코딩 X */}
+      <Text style={styles.category}>🔥</Text>
+      {/* TODO: 오늘까지 추가되게 수정해야함~ */}
+
+      <Text style={styles.date}>{format(new Date(), 'PPP', {locale: ko})}</Text>
+
+      {isTitle && (
+        <TextInput
+          placeholder={'제목을 입력해주세요!'}
+          style={styles.titleInput}
+          returnKeyType={'next'}
+          onSubmitEditing={() => bodyRef.current.focus()}
+          onChangeText={onChangeTitle}
+          value={title}
+        />
+      )}
       <TextInput
         placeholder={'무슨 생각을 하고 계세요?'}
         style={styles.bodyInput}
         multiline
         textAlignVertical={'top'}
+        onChangeText={onChangeContent}
         // maxLength={150}
+        value={content}
         ref={bodyRef}
       />
     </View>
@@ -31,7 +44,6 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingHorizontal: 20,
     flex: 1,
-    backgroundColor: 'pink',
   },
   category: {
     fontSize: 32,
@@ -55,6 +67,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#31302B',
     lineHeight: 27,
+    flex: 1,
   },
 });
 

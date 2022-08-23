@@ -24,7 +24,7 @@ const CustomFlatList = styled.FlatList`
   flex-grow: 0;
 `;
 
-function WriteCategory() {
+function WriteCategory({onSelectCategory}) {
   const now = format(new Date(), 'PPP', {locale: ko});
 
   return (
@@ -40,7 +40,12 @@ function WriteCategory() {
         ]}
         numColumns={5}
         keyExtractor={item => item.id}
-        renderItem={item => <WriteCategoryItem category={item} />}
+        renderItem={item => (
+          <WriteCategoryItem
+            category={item}
+            onSelectCategory={onSelectCategory}
+          />
+        )}
       />
     </Container>
   );
