@@ -1,13 +1,23 @@
 import React from 'react';
 import styled, {css} from 'styled-components/native';
 
+// Default
+
 // TODO: 버튼 배경색 커스텀 가능하게 수정할것
-function CustomButton({title, buttonBackgroundColor, type, onPress, children}) {
+function CustomButton({
+  size,
+  title,
+  buttonBackgroundColor,
+  type,
+  onPress,
+  children,
+}) {
   return (
     <Pressable
       onPress={onPress}
       buttonBackgroundColor={buttonBackgroundColor}
-      type={type}>
+      type={type}
+      size={size}>
       {children || <Text type={type}>{title}</Text>}
     </Pressable>
   );
@@ -21,6 +31,39 @@ const Pressable = styled.Pressable`
   justify-content: center;
   background-color: ${({theme}) => theme.bg02};
 
+  ${({size, color, theme}) =>
+    size === 'xxs' &&
+    `
+    padding: 2px 6px;
+    border: ${theme.colors[color]};
+    font-size: 12px;
+    font-weight: 500;
+  `};
+
+  ${({size, color, theme}) =>
+    size === 'xs' &&
+    css`
+      padding: 4px 8px;
+    `};
+
+  ${({size, color, theme}) =>
+    size === 's' &&
+    css`
+      padding: 8px 12px;
+    `};
+
+  ${({size, color, theme}) =>
+    size === 'm' &&
+    css`
+      padding: 12px 16px;
+    `};
+
+  ${({size, color, theme}) =>
+    size === 'l' &&
+    css`
+      padding: 12px 33px;
+    `};
+
   ${({type, theme}) =>
     type === 'gray' &&
     css`
@@ -31,6 +74,12 @@ const Pressable = styled.Pressable`
     type === 'point' &&
     css`
       background-color: ${theme.point};
+    `};
+
+  ${({type, theme}) =>
+    type === 'default' &&
+    css`
+      background-color: #31302b;
     `};
 
   ${({buttonBackgroundColor}) =>
@@ -55,6 +104,12 @@ const Text = styled.Text`
 
   ${({type, theme}) =>
     type === 'gray' &&
+    css`
+      color: #ffffff;
+    `};
+
+  ${({type, theme}) =>
+    type === 'default' &&
     css`
       color: #ffffff;
     `};
