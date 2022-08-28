@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import {Dimensions} from 'react-native';
 import styled from 'styled-components/native';
 import IconButton from '../common/IconButton';
@@ -6,6 +6,9 @@ import {images} from '../../images';
 import CustomButton from '../common/CustomButton';
 import {format} from 'date-fns';
 import {ko} from 'date-fns/locale';
+import DefaultModal from '../common/modal/DefaultModal';
+import ModalBase from '../common/modal/util/ModalBase';
+import ThreadContext from '../../contexts/ThreadContext';
 
 const Container = styled.View`
   flex-direction: row;
@@ -67,27 +70,59 @@ const Content = styled.Text`
 function Thread({thread}) {
   const width = Dimensions.get('window').width;
   const {categoryId, content, date, title, isTitle} = thread;
+  const [isVisible, setIsVisible] = useState(false);
+  const {onRemove} = useContext(ThreadContext);
+
+  const onPressSettingButton = () => {
+    setIsVisible(true);
+  };
+
+  const onBackdropPress = () => {
+    setIsVisible(false);
+  };
 
   return (
-    <Container width={width}>
-      <Left>
-        <CategoryWrapper>
-          <Category>{categoryId}</Category>
-          <BorderWrapper />
-        </CategoryWrapper>
-      </Left>
-      <Right>
-        <RightHeader>
-          <DateText>{format(new Date(), 'PPP', {locale: ko})}</DateText>
-          <IconButton tintColor={'#A5A39B'} type={images.moreHoriz} size={16} />
-        </RightHeader>
-        {isTitle && <Title>{title}</Title>}
-        <RightBody>
-          <Content>{content}</Content>
-        </RightBody>
-        <CustomButton title={'생각 엮기'} />
-      </Right>
-    </Container>
+    <>
+      <Container width={width}>
+        <Left>
+          <CategoryWrapper>
+            <Category>{categoryId}</Category>
+            <BorderWrapper />
+          </CategoryWrapper>
+        </Left>
+        <Right>
+          <RightHeader>
+            <DateText>{format(new Date(), 'PPP', {locale: ko})}</DateText>
+            <IconButton
+              tintColor={'#A5A39B'}
+              type={images.moreHoriz}
+              size={16}
+              onPressOut={onPressSettingButton}
+            />
+          </RightHeader>
+          {isTitle && <Title>{title}</Title>}
+          <RightBody>
+            <Content>{content}</Content>
+          </RightBody>
+          <CustomButton title={'생각 엮기'} />
+        </Right>
+        {/*<DefaultModal isVisible={isVisible} onBackdropPress={onBackdropPress} />*/}
+      </Container>
+      <ModalBase
+        Component={DefaultModal}
+        isVisible={isVisible}
+        onBackdropPress={onBackdropPress}
+        title={'정말 글을 삭제할까요?'}
+        content={
+          '엮인 글에는 영향을 미치지 않습니다.\n삭제된 글은 복구가 불가합니다.'
+        }
+        leftTitle={'취소'}
+        onPressLeft={onBackdropPress}
+        rightTitle={'삭제하기'}
+        onPressRight={() => onRemove(thread.id)}
+        rightType={'default'}
+      />
+    </>
   );
 }
 // const styles = StyleSheet.create({

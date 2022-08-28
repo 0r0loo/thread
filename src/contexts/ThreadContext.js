@@ -32,7 +32,11 @@ export function ThreadContextProvider({children}) {
     setThreads([thread, ...threads]);
   };
   const onModify = () => {};
-  const onRemove = () => {};
+  const onRemove = id => {
+    console.log('-> id', id);
+    const newThreads = threads.filter(thread => thread.id !== id);
+    setThreads(newThreads);
+  };
 
   useEffect(() => {
     (async () => {
